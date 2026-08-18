@@ -13,3 +13,5 @@ def divide (a , b):
         raise ValueError ("Dividing by zero is not possible.")
     return a/b
 
+def  raise_to_power ( base , exponent ):
+    return  base  **  exponent
