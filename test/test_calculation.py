@@ -1,5 +1,5 @@
 import  pytest 
-from calculator.calculation import add, subtract, multiply, divide 
+from calculator.calculation import add, subtract, multiply, divide, raise_to_power 
 
 
 class  TestAdd :
@@ -36,3 +36,13 @@ class  TestDivide :
     def  test_division_with_zero ( self ):
          with  pytest . raises ( ValueError ):
              divide ( 5 , 0 )
+
+class  TestRaiseToPower :
+     def  test_enkelt ( self ):
+         assert  raise_to_power ( 2 , 3 ) ==  8 
+
+     def  test_noll_exponent ( self ):
+         assert  raise_to_power ( 5 , 0 ) ==  1 
+
+     def  test_negativ_exponent ( self ):
+         assert  raise_to_power ( 2 , - 1 ) ==  0.5
